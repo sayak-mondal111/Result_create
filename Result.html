@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABC School - Result App</title>
+  <link rel="stylesheet" href="Result.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>ABC School</h1>
+    <h4 style=" text-align: center;">Empowering education through technology</h4>
+    <!-- Section 1: Update Marks -->
+    <section id="update-section">
+      <h2>Update Student Details</h2>
+      <form id="update-form">
+        <input type="text" id="studentName" placeholder="Student Name" required />
+        <input type="text" id="studentRoll" placeholder="Roll No" required />
+        <input type="text" id="studentId" placeholder="Student ID" required />
+        <input type="text" id="studentClass" placeholder="Class (e.g., 10th, 12th)" required />
+        <input type="text" id="studentSection" placeholder="Section (e.g., A, B, C)" required />
+        <input type="text"  id = "examType" placeholder = "examtype (e.g., 1st Summative)" required/>
+          
+
+
+        <div id="subject-container">
+          <div class="subject-row">
+            <input type="text" name="subject" placeholder="Subject" required>
+            <input type="text" name="Marks" placeholder="Marks" required>
+          </div>
+          <!-- More rows will be added here -->
+        </div>
+        <div class="button-container">
+          <button type="button" id="submit-btn1">Add Subject</button>
+          <button type="submit" id="submit-btn">Update</button>
+          
+        </div>
+
+      </form>
+
+
+
+    </section>
+
+    <!-- Section 2: Search Result -->
+
+    <section id="search-result">
+      <h3>Search Result</h3>
+      <form id="search-form">
+         <input type="text" id="searchClass" placeholder="Enter class" required />
+          <input type="text" id="searchSection" placeholder="Enter section" required />
+        <input type="text" id="searchRoll" placeholder="Enter Roll No" required />
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <!-- Section 3: Show Result -->
+    <section id="result-section">
+      <h2>Full Result</h2>
+      <div id="result-display">
+        <!-- Student result will be displayed here -->
+      </div>
+    </section>
+
+    <!-- Section 3: Download as PDF -->
+    <section id="pdf-section">
+      <h2>Download Result</h2>
+      <button onclick="downloadPDF()" id="download-btn">Download PDF</button>
+    </section>
+  </div>
+
+  <script src="Result.js"></script>
+</body>
+
+</html>
+
+<!-- after type update it does not show the result -->

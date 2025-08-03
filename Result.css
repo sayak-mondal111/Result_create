@@ -1,0 +1,290 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f5f7fa 100%);
+  min-height: 100vh;
+  color: #222;
+  transition: background 0.5s;
+  
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.12);
+  padding: 32px 40px;
+  animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1,
+h3 {
+  text-align: center;
+  color: #3b82f6;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+form {
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 32px;
+  animation: fadeIn 1s;
+}
+
+form input,
+form select {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(60, 60, 120, 0.05);
+}
+
+form input:focus,
+form select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
+form button {
+  background: linear-gradient(90deg, #3b82f6 60%, #6366f1 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+}
+
+form button:hover {
+  background: linear-gradient(90deg, #2563eb 60%, #6366f1 100%);
+  transform: scale(1.05);
+}
+
+#result-display {
+  margin-top: 24px;
+  animation: fadeIn 1.2s;
+}
+
+.student-result {
+  background: #f1f5f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(60, 60, 120, 0.07);
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+  animation: fadeIn 0.7s;
+}
+
+.student-result:hover {
+  box-shadow: 0 4px 16px rgba(60, 60, 120, 0.13);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.student-result h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #2563eb;
+  transition: color 0.2s;
+}
+
+.student-result p {
+  margin: 6px 0;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.student-result table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(60, 60, 120, 0.05);
+  animation: fadeIn 1s;
+}
+
+.student-result th,
+.student-result td {
+  padding: 10px 14px;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.student-result th {
+  background: linear-gradient(90deg, #3b82f6 60%, #6366f1 100%);
+  color: #fff;
+  font-weight: 500;
+}
+
+.student-result tr:nth-child(even) {
+  background: #e0e7ff;
+}
+
+.student-result tr:nth-child(odd) {
+  background: #f5f7fa;
+}
+
+.student-result button {
+  background: linear-gradient(90deg, #ef4444 60%, #f59e42 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.08);
+}
+
+.student-result button:hover {
+  background: linear-gradient(90deg, #b91c1c 60%, #f59e42 100%);
+  transform: scale(1.08);
+}
+
+#searchId {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#searchId:focus {
+  border-color: #10b981;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+}
+
+/* Style for the Download PDF button */
+#download-btn {
+  background: linear-gradient(90deg, #10b981 60%, #3b82f6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.08);
+  display: inline-block;
+}
+
+#download-btn:hover {
+  background: linear-gradient(90deg, #059669 60%, #2563eb 100%);
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.15);
+}
+
+/* Add subtle hover effect for table rows */
+.student-result tbody tr:hover {
+  background: #dbeafe;
+  transition: background 0.2s;
+}
+
+/* Add a floating effect for the container on hover */
+.container:hover {
+  box-shadow: 0 12px 40px rgba(60, 60, 120, 0.18);
+  transition: box-shadow 0.3s;
+}
+
+/* Fixed button styles to prevent size changes */
+#submit-btn1,
+#submit-btn
+ {
+  background: linear-gradient(90deg, #059669 60%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 8px 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.15);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  min-width: 120px;
+  /* Fixed minimum width */
+  height: 45px;
+  /* Fixed height */
+  flex-shrink: 0;
+  /* Prevent shrinking */
+  white-space: nowrap;
+  /* Prevent text wrapping */
+}
+
+#submit-btn1:hover,
+#submit-btn:hover 
+{
+  background: linear-gradient(90deg, #047857 60%, #1d4ed8 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.25);
+}
+
+#submit-btn1:active,
+#submit-btn:active
+ {
+  transform: scale(0.98);
+  box-shadow: 0 1px 4px rgba(79, 140, 255, 0.12);
+}
+
+/* Subject container styles to prevent layout shifts */
+#subject-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.subject-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.subject-row input {
+  flex: 1;
+  min-width: 0;
+  /* Allow shrinking */
+}
+
+/* Button container to keep buttons aligned */
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  /* Prevent wrapping */
+}
